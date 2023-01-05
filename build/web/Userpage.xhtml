@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style> 
+            .title{
+              background-color: #664E49;   
+             display: flex;
+             color: goldenrod;
+             flex-direction: row;
+             justify-content: center;  
+                
+            }
+        .Button{
+                width: 200px;
+                height: 60px;
+                display: flex;
+        }
+         body{
+                background-image: url("image/img8.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%
+            }
+            
+        
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="head">
+            <h1 class="title">APPLICANT INFORMATION </h1>
+            <h:panelGrid columns="2">
+              <h:outputLabel value=" firstname"></h:outputLabel>  
+              <h:inputText size="25"/>
+               <h:outputLabel value=" Lastname"></h:outputLabel>  
+              <h:inputText size="25"/>
+               <h:outputLabel value=" GFname"></h:outputLabel>  
+              <h:inputText size="25"/>
+                <h:outputLabel value=" region"></h:outputLabel>  
+              <h:inputText size="25"/>
+              
+              
+              <h:outputLabel value=" gender"></h:outputLabel>  
+              <h:selectOneRadio value="#{userData.data}">          
+   <f:selectItem itemValue="1" itemLabel="male" />
+   <f:selectItem itemValue="2" itemLabel="female" />  
+</h:selectOneRadio>
+            
+              </h:panelGrid>
+            
+             </div>
+            <div class="button1"> 
+             <h:commandButton value ="insert"></h:commandButton>
+            </div>
+            
+            
+            <h:selectOneMenu value="#{userData.data}">
+                <h:outputLabel value="dateofbirth"></h:outputLabel>
+   <f:selectItem itemValue="1" itemLabel="date" />
+     <f:selectItem itemValue="1" itemLabel=" 1" />
+   <f:selectItem itemValue="2" itemLabel=" 2" /> 
+     <f:selectItem itemValue="1" itemLabel=" 3" />
+   <f:selectItem itemValue="2" itemLabel=" 4" /> 
+     <f:selectItem itemValue="1" itemLabel=" 5" />
+   <f:selectItem itemValue="2" itemLabel=" 6" /> 
+  
+</h:selectOneMenu>
+          <h:selectOneMenu value="#{userData.data}"> 
+          <f:selectItem itemValue="1" itemLabel="month" />
+     <f:selectItem itemValue="1" itemLabel=" 01" />
+          
+          
+          </h:selectOneMenu>
+             <h:selectOneMenu value="#{userData.data}"> 
+              <f:selectItem itemValue="1" itemLabel="year" />
+     <f:selectItem itemValue="1" itemLabel=" 2023" />
+             
+             </h:selectOneMenu>
+            
+        </h:form>
+    </h:body>
+</html>
+

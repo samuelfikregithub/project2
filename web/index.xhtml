@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+      <title>HomePage</title>
+        <style>
+            .Button{
+                width: 100px;
+                height: 30px;
+                display: flex;
+                
+                margin-top: 40px;  
+            }
+               .log{
+                width: 100px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+            }
+            body{
+                background-image: url("image/img4.jpg");
+                background-size: 100%
+            }
+            .head
+            {
+             background-color: #664E49;   
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
+
+            }
+            .title{
+                display: flex;
+                color:darkgoldenrod;
+                justify-content: center;
+                flex-basis: 85%;
+            }
+  
+                  
+            
+        </style>
+            
+            
+            
+           
+    </h:head>
+    <h:body>
+        <h:form>
+                    <div class="head">
+            <h1 class="title">welcome to  Ethiopian immigrations service  </h1>
+            <div class="log">
+                <h:commandButton value="Admin_Login"   action="Adminpage" ></h:commandButton>
+            </div>
+            <div class="Button">
+                <h:commandButton value="User_Login"   action="Userlogin"></h:commandButton>
+            </div>  
+            
+           <div class="Button">
+                <h:commandButton value="about-page"  action="About"></h:commandButton>
+            </div>  
+            
+            
+            
+           <div>
+            <img class="photo" src="applicant/image/img4.jpg" alt="alt"/>
+        </div>  
+        </div>
+        
+        </h:form>
+    welcome to  Ethiopian immigrations service  
+    </h:body>
+</html>
+
