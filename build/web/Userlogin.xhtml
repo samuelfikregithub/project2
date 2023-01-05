@@ -57,7 +57,7 @@
             <h:outputLabel for="txtUserName"> 
                 <h:outputText value=" username"/> 
                
-            <h:inputText id="txtUserName" required="true" requiredMessage="username is required" validatorMessage="user name must be"  />
+            <h:inputText id="txtUserName" required="true" requiredMessage="username is required" value="#{ userlogin.username}"  />
             
                </h:outputLabel>
               </h:panelGrid>
@@ -65,14 +65,14 @@
             <h:panelGrid columns="2" style="color: brown">
             <h:outputLabel for="txtpassword"> 
                   <h:outputText value="userPass"/>
-                  <h:inputSecret id="txtpassword"  required="true" requiredMessage="password is required" validatorMessage="user name must be"  />
+                  <h:inputSecret id="txtpassword"  required="true" requiredMessage="password is required" value="#{ userlogin.password}"/>
               
              </h:outputLabel>
                
             </h:panelGrid>
                   <br/>
                  <h:panelGrid columns="3" style="color: brown">
-                   <h:commandButton class="logg" value="signup" action="Userpage"/>
+                   <h:commandButton class="logg" value="sign in" action="#{ userlogin.checkmethod()}"/>
                     </h:panelGrid>
                   </h:form>
           
