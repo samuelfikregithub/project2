@@ -4,7 +4,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title> userpage Title</title>
         <style> 
             .title{
               background-color: #664E49;   
@@ -34,54 +34,35 @@
             <h1 class="title">APPLICANT INFORMATION </h1>
             <h:panelGrid columns="2">
               <h:outputLabel value=" firstname"></h:outputLabel>  
-              <h:inputText size="25"/>
+              <h:inputText size="25" value ="#{user.firstName}"/>
                <h:outputLabel value=" Lastname"></h:outputLabel>  
-              <h:inputText size="25"/>
+              <h:inputText size="25" value ="#{user.lastName}"/>
                <h:outputLabel value=" GFname"></h:outputLabel>  
-              <h:inputText size="25"/>
+              <h:inputText size="25" value ="#{user.gfName}"/>
                 <h:outputLabel value=" region"></h:outputLabel>  
-              <h:inputText size="25"/>
+              <h:inputText size="25" value ="#{user.region}"/>
+              
               
               
               <h:outputLabel value=" gender"></h:outputLabel>  
-              <h:selectOneRadio value="#{userData.data}">          
-   <f:selectItem itemValue="1" itemLabel="male" />
-   <f:selectItem itemValue="2" itemLabel="female" />  
+              <h:selectOneRadio value="#{user.gender}">          
+   <f:selectItem itemValue="male" itemLabel="male" />
+   <f:selectItem itemValue="female" itemLabel="female" />  
 </h:selectOneRadio>
+               <h:outputLabel value=" dateofbirth"></h:outputLabel>  
+              <h:inputText size="25" value ="#{user.dateOfBirth}"/>
             
               </h:panelGrid>
             
              </div>
             <div class="button1"> 
-             <h:commandButton value ="insert"></h:commandButton>
+                <h:commandButton value ="insert" action ="#{user.userregister()}" ></h:commandButton>
             </div>
             <div class="button2"> 
              <h:commandButton value ="update"></h:commandButton>
             </div>
             
-            
-            <h:selectOneMenu value="#{userData.data}">
-                <h:outputLabel value="dateofbirth"></h:outputLabel>
-   <f:selectItem itemValue="1" itemLabel="date" />
-     <f:selectItem itemValue="1" itemLabel=" 1" />
-   <f:selectItem itemValue="2" itemLabel=" 2" /> 
-     <f:selectItem itemValue="1" itemLabel=" 3" />
-   <f:selectItem itemValue="2" itemLabel=" 4" /> 
-     <f:selectItem itemValue="1" itemLabel=" 5" />
-   <f:selectItem itemValue="2" itemLabel=" 6" /> 
-  
-</h:selectOneMenu>
-          <h:selectOneMenu value="#{userData.data}"> 
-          <f:selectItem itemValue="1" itemLabel="month" />
-     <f:selectItem itemValue="1" itemLabel=" 01" />
-          
-          
-          </h:selectOneMenu>
-             <h:selectOneMenu value="#{userData.data}"> 
-              <f:selectItem itemValue="1" itemLabel="year" />
-     <f:selectItem itemValue="1" itemLabel=" 2023" />
-             
-             </h:selectOneMenu>
+         
             
         </h:form>
     </h:body>

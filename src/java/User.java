@@ -1,38 +1,35 @@
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
 
 
 
+
+@ManagedBean
+@RequestScoped
 public class User {
-   private String firstname;
-   private String Lastname;
-   private String GFname;
-   private String region;
-   private String gender;
+   private String firstName;
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return Lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String Lastname) {
-        this.Lastname = Lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getGFname() {
-        return GFname;
-    }
-
-    public void setGFname(String GFname) {
-        this.GFname = GFname;
-    }
 
     public String getRegion() {
         return region;
@@ -50,13 +47,43 @@ public class User {
         this.gender = gender;
     }
 
-    public String getDateifbirth() {
-        return dateifbirth;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDateifbirth(String dateifbirth) {
-        this.dateifbirth = dateifbirth;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
-   private String dateifbirth;
-    
+   private String lastName;
+   private String gfName;
+
+    public String getGfName() {
+        return gfName;
+    }
+
+    public void setGfName(String gfName) {
+        this.gfName = gfName;
+    }
+   private String region;
+   private String gender;
+  private String dateOfBirth;
+
+  
+    public void userregister() throws ClassNotFoundException {
+        try {
+           DBConnection db=new DBConnection();
+             Connection connection = db.connMethod();
+        PreparedStatement stmt=connection.prepareStatement("Insert into USERPAGE(FNAME,LNAME,GFNAME,REGION,GENDER,DATEOFBIRTH) values (?,?,?,?,?,?)");     
+        stmt.setString(1,firstName);  
+        stmt.setString(2,lastName);  
+        stmt.setString(3,gfName);  
+        stmt.setString(4,region); 
+        stmt.setString(5,gender); 
+        stmt.setString(6,dateOfBirth);
+        stmt.executeUpdate();  
+            System.err.println("success");
+        }
+        catch (SQLException e) {
+        }
+    }
 }
