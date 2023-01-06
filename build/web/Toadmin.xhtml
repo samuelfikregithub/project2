@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        
+        
+        
+        
+        <style>
+              body{
+                background-image: url("image/img8.jpg");
+                background-size: 100%
+            }
+              
+           td{
+                margin: 20px;
+                
+                padding: 20px;
+                background-color: bisque;
+            }
+             
+            th{
+                background-color: goldenrod;
+                margin: 20px;
+                
+                padding: 20px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:dataTable id="ADMINTABLE" class="ADMINPAGE" value="#{toadmin.getadmininformation()}" var="data">
+            
+              <h:column>
+                <f:facet name="header">
+                    userId  
+                </f:facet>
+                <h:outputText value="#{data.userId}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                   userName
+                </f:facet>
+                <h:outputText value="#{data.userName}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                    userLastName
+                </f:facet>
+                <h:outputText value="#{data.userLastName}"/>  
+
+            </h:column>  <h:column>
+                <f:facet name="header">
+                   birthCard
+                </f:facet>
+                <h:outputText value="#{data.birthCard}"/>  
+
+            </h:column>
+      
+        </h:dataTable>
+    </h:body>
+</html>

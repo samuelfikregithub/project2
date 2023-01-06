@@ -49,13 +49,13 @@ private String birthCard;
         try {
            DBConnection db=new DBConnection();
              Connection connection = db.connMethod();
-        PreparedStatement stmt=connection.prepareStatement("Insert into ADMINPAGE(USERID,USERNAME,USERLASTNAME,BIRTHCARD) values (?,?,?,?)");     
-        stmt.setString(1,userId);   
-        stmt.setString(2,userName);  
-        stmt.setString(3,userLastName); 
-        stmt.setString(4,birthCard); 
+        PreparedStatement pstmt=connection.prepareStatement("Insert into ADMINPAGE(USERID,USERNAME,USERLASTNAME,BIRTHCARD) values (?,?,?,?)");     
+        pstmt.setString(1,userId);   
+        pstmt.setString(2,userName);  
+        pstmt.setString(3,userLastName); 
+        pstmt.setString(4,birthCard); 
         
-        stmt.executeUpdate();  
+        pstmt.executeUpdate();  
             System.err.println("success");
         }
         catch (SQLException e) {
