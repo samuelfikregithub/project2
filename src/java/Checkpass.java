@@ -9,7 +9,7 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class Checkpass {
   
-    public static boolean check(String name, String pass) {
+    public static boolean check(String name, String password) {
         boolean check = false;
         try {
 
@@ -17,7 +17,7 @@ public class Checkpass {
             Connection con = dbcon.connMethod();
             PreparedStatement ps = con.prepareStatement("select * from USERLOGIN where USERNAME=? and PASSWORD=?");
             ps.setString(1, name);
-            ps.setString(2, pass);
+            ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             check = rs.next();
 
