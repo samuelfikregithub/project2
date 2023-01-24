@@ -36,7 +36,6 @@ public class Toadmin {
     }catch( SQLException | ClassNotFoundException e)
     {
     
-    
     }
     
     return adminfList;

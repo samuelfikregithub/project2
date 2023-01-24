@@ -5,8 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
-
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,16 +19,14 @@ public class Touser {
     public List <Userget> getuserinformation(){
     userfList = new ArrayList<>();
     
-    
-      
     try{
         
            DBConnection dbc = new DBConnection();
             Connection con = dbc.connMethod();
-             ResultSet resultset = con.createStatement().executeQuery("select * from USERPAGE");
+           
+             ResultSet resultset = con.createStatement().executeQuery("select * from USERPAGE ");
                  while (resultset.next()) {
              
-          
                 String name = resultset.getString("FNAME");                             
                String  lname = resultset.getString("LNAME");
                    String gfname = resultset.getString("GFNAME");

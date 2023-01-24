@@ -45,6 +45,21 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+.user {
+     padding: 5px;
+     font-size: 16px;
+     border-width: 1px;
+     border-color: #453e3e;
+     background-color: #ad3333;
+     color: #eda048;
+     border-style: solid;
+     border-radius: 0px;
+     box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+     text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+ .user:focus {
+     outline:none;
+}
           
         </style>
     </h:head>
@@ -52,20 +67,22 @@
         
         <h1 id ="log"> USER SIGN IN PAGE </h1>
         <h:form>
+            
           <h:panelGrid columns="1" style="color: brown">
             <h:outputLabel for="txtUserName"> 
                 <h:outputText value=" username"/> 
-               
-            <h:inputText id="txtUserName" required="true" requiredMessage="username is required" value="#{ userlogin.username}"  />
-            
+               <div class="user">
+            <h:inputText id="txtUserName" class="user" required="true" requiredMessage="username is required" value="#{ userlogin.username}"  />
+             </div>
                </h:outputLabel>
               </h:panelGrid>
             <br/>
             <h:panelGrid columns="2" style="color: brown">
             <h:outputLabel for="txtpassword"> 
                   <h:outputText value="userPass"/>
-                  <h:inputSecret id="txtpassword"  required="true" requiredMessage="password is required" value="#{ userlogin.password}"/>
-              
+                   <div class="user">
+                  <h:inputSecret id="txtpassword" class="user" required="true" requiredMessage="password is required" value="#{ userlogin.password}"/>
+                </div>
              </h:outputLabel>
                
             </h:panelGrid>
@@ -73,6 +90,7 @@
                  <h:panelGrid columns="3" style="color: brown">
                    <h:commandButton class="logg" value="sign in" action="#{ userlogin.checkmethod()}"/>
                     </h:panelGrid>
+                
                   </h:form>
           
         
