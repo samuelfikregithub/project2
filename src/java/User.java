@@ -69,7 +69,7 @@ public class User {
   private String dateOfBirth;
 
   
-    public String userregister() throws ClassNotFoundException {
+    public void  userregister() throws ClassNotFoundException {
         try {
            DBConnection db=new DBConnection();
              Connection connection = db.connMethod();
@@ -85,6 +85,6 @@ public class User {
         }
         catch (SQLException e) {
         }
-        return "Touser.xhtml";
+        
     }
 }

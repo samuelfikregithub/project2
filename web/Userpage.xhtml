@@ -12,7 +12,11 @@
              color: goldenrod;
              flex-direction: row;
              justify-content: center;  
-                
+               
+    display: flex;
+   
+    font-size: 2rem;
+
             }
     
          body{
@@ -21,9 +25,10 @@
                 background-size: 100%
             }
             .tbl{
-               width: 55%;
+               width: 35%;
                margin: auto;
-               left: 200px;
+               left: 400px;
+               
                height: 400px;
                top: 80px;
                
@@ -31,6 +36,19 @@
                border-color: goldenrod;
                background-color: rgba(255,255,255,0.4);
                 padding: 70px 50px;
+                 position: absolute;
+            }
+             .tobtn{
+               width: 25%;
+               margin: auto;
+              right: 30px;
+               height: 400px;
+               bottom:  30px;
+               flex-basis:row;
+               border-style: solid;
+               border-color: bisque;
+               background-color: rgba(255,255,255,0.4);
+                padding: 50px 20px;
                  position: absolute;
             }
               .nav{
@@ -50,58 +68,85 @@
     <h:body>
         <h:form>
             <div class="head">
+                
             <h1 class="title">APPLICANT INFORMATION </h1>
             <div class="tbl">
                 
+                <h:panelGrid columns="2" style="color: brown"> 
+                    
               <h:outputLabel value=" firstname"></h:outputLabel>  
               <h:inputText size="25" value ="#{user.firstName}"/>
+              </h:panelGrid> 
               <br>
+                  <h:panelGrid columns="2" style="color: brown"> 
                             <h:outputLabel value=" Lastname"></h:outputLabel>  
                             <h:inputText size="25" value ="#{user.lastName}"/>
+                             </h:panelGrid> 
                             </br>
               <br>
+                      <h:panelGrid columns="2" style="color: brown"> 
                <h:outputLabel value=" GFname"></h:outputLabel>  
               <h:inputText size="25" value ="#{user.gfName}"/>
+               </h:panelGrid> 
               </br> 
+                <br>
+                     <h:panelGrid columns="2" style="color: brown"> 
                          <h:outputLabel value=" region"></h:outputLabel>  
                           <h:inputText size="25" value ="#{user.region}"/>
-              
-              
-              
+                </h:panelGrid> 
+              </br>
+                <br>
+                    <h:panelGrid columns="2" style="color: brown"> 
               <h:outputLabel value=" gender"></h:outputLabel>  
               <h:selectOneRadio value="#{user.gender}">          
    <f:selectItem itemValue="male" itemLabel="male" />
    <f:selectItem itemValue="female" itemLabel="female" />  
 </h:selectOneRadio>
+              
+                 </h:panelGrid> 
+              
+              </br>
+                <br>
+                     <h:panelGrid columns="2" style="color: brown"> 
+                    
                <h:outputLabel value=" dateofbirth"></h:outputLabel>  
               <h:inputText size="25" value ="#{user.dateOfBirth}"/>
             
-         
+           </h:panelGrid> 
             
-            
+            </br>
            
               
-    
-         <a href="../src/java/Touser.java"></a>
+              <div class="tobtn">
                 
             <div class="button1"> 
+                <br>
                 <h:commandButton value ="insert" action ="#{user.userregister()}" ></h:commandButton>
+                </br>
             </div>
-            
+           
             
             <div class="button2"> 
+                 <br>
              <h:commandButton value ="update" action="Toupdateuser"></h:commandButton>
+             </br>
             </div>
             
             
              <div class="button3"> 
+                  <br>
              <h:commandButton value ="view" action="Touser"/>
+             </br>
             </div>
           
-                
+                </div>
            
                 </div>
              </div>
+            <br>
+                first name<h:inputText  value="#{touser.fname}"></h:inputText></br>
+                <br>
+            <h:commandButton value ="URINFO" action ="Tosingle.xhtml" ></h:commandButton></br>
         </h:form>
     </h:body>
 </html>

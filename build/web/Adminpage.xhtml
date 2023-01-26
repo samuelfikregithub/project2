@@ -9,12 +9,29 @@
                 background-image: url("image/imm2.jpg");
                 background-size: 100%
             }
-            
-            
+             .t1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                background-color: #ad3333;
+                flex-basis: 90%;
+            }
+          
         </style>
     </h:head>
     <h:body>
-        <h:form><h:panelGrid columns="2"/>
+        <h:form>
+            
+               <div class="t1">
+            <div class="t2">
+                   <h1 class="title">APPLICANT INFORMATION ADDED BY ADMIN </h1>
+            </div>
+            
+         </div>
+     
+     
+            <h:panelGrid columns="2"/>
+            
              <h:outputLabel value=" userId  "></h:outputLabel>      
              <h:inputText size="" value="#{admin.userId}"/>
               <h:outputLabel value=" userName  "></h:outputLabel>      

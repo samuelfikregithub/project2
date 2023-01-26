@@ -77,7 +77,7 @@ public void Toupdateuserinfo(){
          
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            String edit= "update USERPAGE set FNAME='"+firstName+"',LNAME='"+lastName+"',GFNAME='"+gfName+"',REGION='"+region+"',GENDER='"+gender+"' DATEOFBIRTH='"+dateofbirth+"'";
+            String edit= "update USERPAGE set FNAME='"+firstName+"',LNAME='"+lastName+"',GFNAME='"+gfName+"',REGION='"+region+"',GENDER='"+gender+"' where DATEOFBIRTH='"+dateofbirth+"'";
           Statement sam=null;
         sam = con.createStatement();
         sam.executeQuery(edit);
