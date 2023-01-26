@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title> userpage Title</title>
+        <style> 
+            .title{
+              background-color: #664E49;   
+             display: flex;
+             color: goldenrod;
+             flex-direction: row;
+             justify-content: center;  
+                
+            }
+        .Button{
+                width: 200px;
+                height: 60px;
+                display: flex;
+        }
+         body{
+                background-image: url("image/img4.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%
+            }
+            
+        
+        </style>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="head">
+            <h1 class="title">EDIT USER INFORMATION </h1>
+            <h:panelGrid columns="2">
+              <h:outputLabel value=" firstname"></h:outputLabel>  
+              <h:inputText size="25" value ="#{toupdateuser.firstName}"/>
+               <h:outputLabel value=" Lastname"></h:outputLabel>  
+              <h:inputText size="25" value ="#{toupdateuser.lastName}"/>
+               <h:outputLabel value=" GFname"></h:outputLabel>  
+              <h:inputText size="25" value ="#{toupdateuser.gfName}"/>
+                <h:outputLabel value=" region"></h:outputLabel>  
+              <h:inputText size="25" value ="#{toupdateuser.region}"/>
+              
+              
+              
+              <h:outputLabel value=" gender"></h:outputLabel>  
+              <h:selectOneRadio value="#{toupdateuser.gender}">          
+   <f:selectItem itemValue="male" itemLabel="male" />
+   <f:selectItem itemValue="female" itemLabel="female" />  
+</h:selectOneRadio>
+               <h:outputLabel value=" dateofbirth"></h:outputLabel>  
+              <h:inputText size="25" value ="#{toupdateuser.dateofbirth}"/>
+            
+              </h:panelGrid>
+            
+             </div>
+            <div class="button1"> 
+                <h:commandButton value ="insert" action ="#{toupdateuser.Toupdateuserinfo()}" ></h:commandButton>
+            </div>
+            <div class="button2"> 
+                <h:commandButton value ="update"></h:commandButton>
+            </div>
+            
+         
+            
+        </h:form>
+    </h:body>
+</html>
+

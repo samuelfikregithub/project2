@@ -8,7 +8,11 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean
 @RequestScoped
 public class User {
-   private String firstName;
+
+    /**
+     *
+     */
+    private String firstName;
 
     public String getFirstName() {
         return firstName;
@@ -65,7 +69,7 @@ public class User {
   private String dateOfBirth;
 
   
-    public void userregister() throws ClassNotFoundException {
+    public String userregister() throws ClassNotFoundException {
         try {
            DBConnection db=new DBConnection();
              Connection connection = db.connMethod();
@@ -81,5 +85,6 @@ public class User {
         }
         catch (SQLException e) {
         }
+        return "Touser.xhtml";
     }
 }

@@ -52,7 +52,7 @@ public class Userlogin {
             if ("SAMMY".equals(UserName)) {
                 return "Userpage";
             } else {
-                return "Userlogin";
+                return "Adminpage";
             }
         } else {
             FacesContext.getCurrentInstance().addMessage(

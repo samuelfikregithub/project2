@@ -16,6 +16,7 @@ import javax.faces.bean.RequestScoped;
 
 public class Touser {
       public List <Userget> userfList;
+    
     public List <Userget> getuserinformation(){
     userfList = new ArrayList<>();
     
@@ -23,7 +24,7 @@ public class Touser {
         
            DBConnection dbc = new DBConnection();
             Connection con = dbc.connMethod();
-           
+          
              ResultSet resultset = con.createStatement().executeQuery("select * from USERPAGE ");
                  while (resultset.next()) {
              
