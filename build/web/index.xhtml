@@ -4,7 +4,9 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
       <title>HomePage</title>
+       <link rel="stylesheet" href="Css.css"></link>
         <style>
+            
             .Button{
             
              
@@ -23,17 +25,19 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
-                background-color: #ad3333;
+                background-color: #664E49;
+                position: fixed;
+                width: 100%;
               
             }
             .header1{
                 display: flex;
                 flex-basis: 90%;
-                
+               
             }
   
                   
-            .nav{
+            .navigation{
                 margin: 0;
                 
             } 
@@ -43,95 +47,19 @@
                 justify-content:  space-around;
                 align-content: space-around;
                 padding: 30px;
-                height: 400px;
+                height: 500px;
+                background-image: url("image/1img.jpg");
+               background-size: 100%;
                 
             }
-            h2{
-                font-family: cursive;
-                font-size: 1.5rem;
-                   color:goldenrod; 
-                   width: 50%;
-                  
-            }
+         
             .he{
-                color:white;
+                color:goldenrod;
                font-family: Georgia, serif;
                font-size: 1.7rem;
             }
-            .lorem{
-                display: flex;
-                flex-direction: row;
-                transform: scale(1.0);
-                
-            }
-            .btn {
-  background: #ff0000;
-  background-image: -webkit-linear-gradient(top, #ff0000, #2980b9);
-  background-image: -moz-linear-gradient(top, #ff0000, #2980b9);
-  background-image: -ms-linear-gradient(top, #ff0000, #2980b9);
-  background-image: -o-linear-gradient(top, #ff0000, #2980b9);
-  background-image: linear-gradient(to bottom, #ff0000, #2980b9);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  -webkit-box-shadow: 4px 4px 3px #666666;
-  -moz-box-shadow: 4px 4px 3px #666666;
-  box-shadow: 4px 4px 3px #666666;
-  font-family: Georgia;
-  color: #ffbf00;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #de5050;
-  text-decoration: none;
-}
-.alig{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-between;
-    
-}
-.text{
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-}
-.footer{
-      background-color: #ad3333;
-      cursor: auto;
-}
-.anchor-links{
-    display: flex;
-                padding-top: 20px;
-              
-                align-content: space-around;
-                justify-content: center;
-}
-.footfooter {
-                  display: flex;
-                  align-content: space-around;
-                  justify-content: center;
-                  text-decoration: none;
-                font-family: 'Monteserrat', sans-serif;
-                color: white;
-                opacity: 0.5;
-            }
-            .anchor-link{
-                margin-left: 15px;
-                 margin-right: 15px;
-                opacity: 0.75;
-                text-decoration: none;
-                font-family: 'Monteserrat', sans-serif;
-                color: white;
-                
-            }
-            .anchor-link:hover{
-                color: red;
-            }
+           
+         
         </style>
             
           
@@ -158,7 +86,7 @@
             <div class="lorem">
                 
                 <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce luctus urna id nisl congue, eget vulputate odio laoreet. In hac habitasse platea dictumst. Duis ut urna felis. Proin non varius turpis. Phasellus hendrerit est ipsum, sed vestibulum tellus fringilla sit amet. Mauris ut commodo mi. Donec et rhoncus diam, in sollicitudin urna. Donec nec iaculis purus.</h2>
-<h:form class="nav">
+<h:form class="navigation">
     <div class="alig">
         <a href="../src/java/Touser.java"></a>
       <div class="Button">
