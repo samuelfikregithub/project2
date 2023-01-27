@@ -71,8 +71,22 @@
                background-size: 100%;
                 
             }
-         
-
+              .he{
+                color:goldenrod;
+               font-family: Georgia, serif;
+               font-size: 1.7rem;
+            }
+              
+            .he{
+                color:goldenrod;
+               font-family: Georgia, serif;
+               font-size: 1.7rem;
+            }
+         .navigation{
+                margin: 0;
+                
+            } 
+        
 
                 .anchor-link{
                 margin-left: 15px;
