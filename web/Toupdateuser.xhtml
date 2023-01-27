@@ -24,6 +24,21 @@
                 background-repeat: no-repeat;
                 background-size: 100%
             }
+               .tb2{
+               width: 35%;
+               margin: auto;
+               left: 400px;
+               
+               height: 400px;
+               top: 80px;
+               
+               border-style: solid;
+               border-color: goldenrod;
+               background-color: rgba(255,255,255,0.4);
+                padding: 70px 50px;
+                 position: absolute;
+            }
+                 
             
         
         </style>
@@ -32,37 +47,51 @@
         <h:form>
             <div class="head">
             <h1 class="title">EDIT USER INFORMATION </h1>
+            
+            <div class="tb2">
             <h:panelGrid columns="2">
-              <h:outputLabel value=" firstname"></h:outputLabel>  
-              <h:inputText size="25" value ="#{toupdateuser.firstName}"/>
-               <h:outputLabel value=" Lastname"></h:outputLabel>  
-              <h:inputText size="25" value ="#{toupdateuser.lastName}"/>
-               <h:outputLabel value=" GFname"></h:outputLabel>  
-              <h:inputText size="25" value ="#{toupdateuser.gfName}"/>
+              <h:outputLabel style=" display: block; margin-bottom: 8px; color:red;  font-weight:500;" value=" FirstName"></h:outputLabel>  
+              <h:inputText style="width: 100%; height: 30px; background: brown;
+                             color:black; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
+                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; " size="25" value ="#{toupdateuser.firstName}"/>
+              
+              
+               <h:outputLabel  style=" display: block; margin-bottom: 8px; color: red;  font-weight:500;" value=" Lastname"></h:outputLabel>  
+              <h:inputText style="width: 100%; height: 30px; background: brown;
+                             color:black; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
+                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; " size="25" value ="#{toupdateuser.lastName}"/>
+              
+              
+               <h:outputLabel style=" display: block; margin-bottom: 8px; color:red;  font-weight:500;" value=" GFname"></h:outputLabel>  
+              <h:inputText style="width: 100%; height: 30px; background: brown;
+                             color:black; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
+                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; " size="25" value ="#{toupdateuser.gfName}"/>
                 <h:outputLabel value=" region"></h:outputLabel>  
-              <h:inputText size="25" value ="#{toupdateuser.region}"/>
+              <h:inputText style="width: 100%; height: 30px; background: brown;
+                             color:black; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
+                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; " size="25" value ="#{toupdateuser.region}"/>
               
               
               
-              <h:outputLabel value=" gender"></h:outputLabel>  
+              <h:outputLabel style=" display: block; margin-bottom: 8px; color:red;  font-weight:500;" value=" gender"></h:outputLabel>  
               <h:selectOneRadio value="#{toupdateuser.gender}">          
    <f:selectItem itemValue="male" itemLabel="male" />
    <f:selectItem itemValue="female" itemLabel="female" />  
 </h:selectOneRadio>
-               <h:outputLabel value=" dateofbirth"></h:outputLabel>  
-              <h:inputText size="25" value ="#{toupdateuser.dateofbirth}"/>
+               <h:outputLabel style=" display: block; margin-bottom: 8px; color:red;  font-weight:500;" value=" dateofbirth"></h:outputLabel>  
+              <h:inputText style="width: 100%; height: 30px; background: brown;
+                             color:black; outline: none; border-radius: 8px; border: 1px solid rgba(255,255,255,.9); 
+                             padding-left: 17px; font-size: 1rem; transition: all.40s ease; " size="25" value ="#{toupdateuser.dateofbirth}"/>
             
               </h:panelGrid>
             
-             </div>
+        
             <div class="button1"> 
-                <h:commandButton value ="insert" action ="#{toupdateuser.Toupdateuserinfo()}" ></h:commandButton>
-            </div>
-            <div class="button2"> 
-                <h:commandButton value ="update"></h:commandButton>
+                <h:commandButton value ="update" action ="#{toupdateuser.Toupdateuserinfo()}" ></h:commandButton>
             </div>
            
-      
+                </div>
+      </div>
             
         </h:form>
     </h:body>
